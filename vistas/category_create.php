@@ -7,18 +7,18 @@
 
 	<div class="form-rest mb-6 mt-6"></div>
 
-	<form action="" method="POST" class="Formjax" autocomplete="off" >
+	<form action="./php/CategoryCreate.php" method="POST" class="Formjax" autocomplete="off" >
 		<div class="columns">
 		  	<div class="column">
 		    	<div class="control">
 					<label>Nombre</label>
-				  	<input class="input" type="text" name="categoria_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{4,50}" maxlength="50" required >
+				  	<input class="input" type="text" name="category_name" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{4,50}" maxlength="50" required >
 				</div>
 		  	</div>
 		  	<div class="column">
 		    	<div class="control">
 					<label>Ubicación</label>
-				  	<input class="input" type="text" name="categoria_ubicacion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{5,150}" maxlength="150" >
+				  	<input class="input" type="text" name="category_location" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ ]{5,150}" maxlength="150" >
 				</div>
 		  	</div>
 		</div>

@@ -1,2 +1,2 @@
 # inventarioPHP
-Repositorio de un inventario con php y MySQL
+Repositorio de gestión inventario con php y MySQL
