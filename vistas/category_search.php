@@ -51,6 +51,10 @@
     </div>
 
     <?php   
+             //Eliminar usuario
+            if(isset($_GET['category_id_del'])){
+                require_once('./php/CategoryDelete.php');
+            }
             if(!isset($_GET['page'])){
                 $page = 1;
             }else{
