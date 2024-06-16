@@ -267,6 +267,6 @@
             </div>
         ';
     }
-    $conexupdateDataion = null;
+    $updateData = null;
 
 ?>
