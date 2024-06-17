@@ -53,14 +53,17 @@
                 <a class="navbar-link">Productos</a>
 
                 <div class="navbar-dropdown">
-                    <a class="navbar-item">
+                    <a class="navbar-item" href="index.php?vista=product_new">
                         Crear
                     </a>
-                    <a class="navbar-item">
-                        Editar
+                    <a class="navbar-item" href="index.php?vista=product_list">
+                        Lista
                     </a>
-                    <a class="navbar-item">
-                        Eliminar
+                    <a class="navbar-item" href="index.php?vista=product_category">
+                        Por categoria
+                    </a>
+                    <a class="navbar-item" href="index.php?vista=product_search">
+                        Buscar
                     </a>
                     <hr class="navbar-divider">
                 </div>
