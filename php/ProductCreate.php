@@ -215,7 +215,7 @@
 
     $saveData->execute($markers);
 
-    if($saveData->rowCount() == 0){
+    if($saveData->rowCount() == 1){
         echo '
             <div class="notification is-info">
                 <strong>¡SE GUARDO EL PRODUCTO!</strong><br>

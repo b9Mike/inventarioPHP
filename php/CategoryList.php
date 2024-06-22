@@ -54,7 +54,7 @@
                 <td>'.$date['categories_name'].'</td>
                 <td>'.$location.'</td>
                 <td>
-                    <a href="index.php?vista=product_categorie&categorie_id='.$date['categories_id'].'" class="button is-link is-rounded is-small">Ver productos</a>
+                    <a href="index.php?vista=product_category&categorie_id='.$date['categories_id'].'" class="button is-link is-rounded is-small">Ver productos</a>
                 </td>
                 <td>
                     <a href="index.php?vista=category_update&categorie_id='.$date['categories_id'].'" class="button is-success is-rounded is-small">Actualizar</a>
