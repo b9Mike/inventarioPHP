@@ -7,7 +7,6 @@
 
     <?php
         require_once "./php/main.php";
-
     ?>
 
 	<div class="form-rest mb-6 mt-6"></div>
