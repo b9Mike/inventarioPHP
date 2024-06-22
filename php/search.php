@@ -2,13 +2,13 @@
 
     $modulo_buscador = cleanString($_POST['modulo_buscador']);
 
-    $modulos = ['user', 'category', 'products'];
+    $modulos = ['user', 'category', 'product'];
 
     if(in_array($modulo_buscador, $modulos)){
         $modulos_url = [
             'user'          => 'user_search',
             'category'      => 'category_search',
-            'products'      => 'products_search'
+            'product'      => 'product_search'
         ];
 
         $modulos_url = $modulos_url[$modulo_buscador];
