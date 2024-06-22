@@ -51,8 +51,8 @@
     </div>
 
     <?php   
-             //Eliminar usuario
-            if(isset($_GET['category_id_del'])){
+             //Eliminar producto
+            if(isset($_GET['product_id_del'])){
                 require_once('./php/ProductDelete.php');
             }
             if(!isset($_GET['page'])){

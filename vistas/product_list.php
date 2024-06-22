@@ -8,7 +8,7 @@
     <?php
         require_once('./php/main.php');
 
-        //Eliminar usuario
+        //Eliminar producto
         if(isset($_GET['product_id_del'])){
             require_once('./php/ProductDelete.php');
         }

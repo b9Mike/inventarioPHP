@@ -30,7 +30,7 @@
                 echo '
                     <div class="notification is-danger">
                         <strong>¡Ocurrio un error inesperado!</strong><br>
-                        La categoria no se pudo eliminar,intente nuevamente.
+                        La categoria no se pudo eliminar, intente nuevamente.
                     </div>
                 ';
             }
