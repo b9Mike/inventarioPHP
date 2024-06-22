@@ -5,81 +5,81 @@
 
 <div class="container pb-6 pt-6">
 
-    <?php
-        require_once "./php/main.php";
-    ?>
+	<?php
+	require_once "./php/main.php";
+	?>
 
 	<div class="form-rest mb-6 mt-6"></div>
 
-	<form action="./php/ProductCreate.php" method="POST" class="Formjax" autocomplete="off" enctype="multipart/form-data" >
+	<form action="./php/ProductCreate.php" method="POST" class="Formjax" autocomplete="off" enctype="multipart/form-data">
 		<div class="columns">
-		  	<div class="column">
-		    	<div class="control">
+			<div class="column">
+				<div class="control">
 					<label>Código de barra</label>
-				  	<input class="input" type="text" name="producto_codigo" pattern="[a-zA-Z0-9- ]{1,70}" maxlength="70" required >
+					<input class="input" type="text" name="producto_codigo" pattern="[a-zA-Z0-9- ]{1,70}" maxlength="70" required>
 				</div>
-		  	</div>
-		  	<div class="column">
-		    	<div class="control">
+			</div>
+			<div class="column">
+				<div class="control">
 					<label>Nombre</label>
-				  	<input class="input" type="text" name="producto_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required >
+					<input class="input" type="text" name="producto_nombre" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="70" required>
 				</div>
-		  	</div>
+			</div>
 		</div>
 		<div class="columns">
-		  	<div class="column">
-		    	<div class="control">
+			<div class="column">
+				<div class="control">
 					<label>Precio</label>
-				  	<input class="input" type="text" name="producto_precio" pattern="[0-9.]{1,25}" maxlength="25" required >
+					<input class="input" type="text" name="producto_precio" pattern="[0-9.]{1,25}" maxlength="25" required>
 				</div>
-		  	</div>
-		  	<div class="column">
-		    	<div class="control">
+			</div>
+			<div class="column">
+				<div class="control">
 					<label>Stock</label>
-				  	<input class="input" type="text" name="producto_stock" pattern="[0-9]{1,25}" maxlength="25" required >
+					<input class="input" type="text" name="producto_stock" pattern="[0-9]{1,25}" maxlength="25" required>
 				</div>
-		  	</div>
-              <div class="column">
-		    	<div class="control">
+			</div>
+			<div class="column">
+				<div class="control">
 					<label>Descripción</label>
-				  	<input class="input" type="text" name="producto_descripcion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="25" required >
+					<input class="input" type="text" name="producto_descripcion" pattern="[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ().,$#\-\/ ]{1,70}" maxlength="25" required>
 				</div>
-		  	</div>
+			</div>
 		</div>
 		<div class="columns">
-            <div class="column">
-              <label>Categoría</label><br>
-              <div class="select is-rounded">
-                    <select name="producto_categoria" >
-                      <option value="" selected="" >Seleccione una opción</option>
-    
-                      <?php
-                          $getCategories = conexion();
-                          $getCategories = $getCategories->query("SELECT categories_id, categories_name FROM categories");
-    
-                          if($getCategories->rowCount() > 0){
-                              $getCategories = $getCategories->fetchAll();
-                              foreach($getCategories as $rw){
-                                  echo '<option value="'.$rw["categories_id"].'" >'.$rw["categories_name"].'</option>';
-                              }
-                          }
-    
-                          $getCategories = null;
-                      ?>
-    
-                    </select>
-              </div>
-            </div>
+			<div class="column">
+				<label>Categoría</label><br>
+				<div class="select is-rounded">
+					<select name="producto_categoria">
+						<option value="" selected="">Seleccione una opción</option>
+
+						<?php
+						$getCategories = conexion();
+						$getCategories = $getCategories->query("SELECT categories_id, categories_name FROM categories");
+
+						if ($getCategories->rowCount() > 0) {
+							$getCategories = $getCategories->fetchAll();
+							foreach ($getCategories as $rw) {
+								echo '<option value="' . $rw["categories_id"] . '" >' . $rw["categories_name"] . '</option>';
+							}
+						}
+
+						$getCategories = null;
+						?>
+
+					</select>
+				</div>
+			</div>
 			<div class="column">
 				<label>Foto o imagen del producto</label><br>
 				<div class="file is-small has-name">
-				  	<label class="file-label">
-				    	<input class="file-input" type="file" name="producto_foto" accept=".jpg, .png, .jpeg" >
-				    	<span class="file-cta">
-				      		<span class="file-label">Imagen</span>
-				    	</span>
-				    	<span class="file-name">JPG, JPEG, PNG. (MAX 3MB)</span>
-				  	</label>
+					<label class="file-label">
+						<input class="file-input" type="file" name="producto_foto" accept=".jpg, .png, .jpeg">
+						<span class="file-cta">
+							<span class="file-label">Imagen</span>
+						</span>
+						<span class="file-name">JPG, JPEG, PNG. (MAX 3MB)</span>
+					</label>
 				</div>
 			</div>
 		</div>
