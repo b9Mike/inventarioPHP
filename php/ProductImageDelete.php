@@ -21,6 +21,7 @@
         $checkProduct = null;
         exit();
     }
+    $checkProduct = null;
 
     # Directorio de imagenes
     $imgDirectory = "../img/producto/";
