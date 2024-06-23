@@ -27,7 +27,7 @@
     
     $checkProduct = null;
 
-    //almacenar datos en variables
+    //  almacenar datos en variables
     $producto_codigo        = cleanString($_POST['producto_codigo']);
     $producto_nombre        = cleanString($_POST['producto_nombre']);
     $producto_precio        = cleanString($_POST['producto_precio']);
@@ -134,6 +134,7 @@
         $check_name = null;
     }
 
+    #   validar categoria
     if($producto_categoria != $product['categories_id']){
         #   validar que la categoria existe
         $check_category = conexion();
@@ -153,8 +154,8 @@
         $check_category = null;
     }
 
-    #Guardando el producto 
-    #Guardar datos
+    #   Guardando el producto 
+    #   Guardar datos
     $saveData = conexion();
     
     $saveData = $saveData->prepare("UPDATE products SET products_name=:products_name, products_description=:products_description, products_price=:products_price, 

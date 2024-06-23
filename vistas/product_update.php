@@ -1,5 +1,4 @@
 <?php
-    
     require_once('./php/main.php');
 
     $id = (isset($_GET['product_id'])) ? $_GET['product_id'] : 0 ;
